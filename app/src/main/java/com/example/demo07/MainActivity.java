@@ -31,5 +31,11 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+        button = findViewById(R.id.button);
+        imageView = findViewById(R.id.imageView);
+        int number = random.nextInt(3) + 1;
+
+        random = new Random();
+
     }
 }
