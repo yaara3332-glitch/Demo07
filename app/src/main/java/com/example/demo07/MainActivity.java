@@ -33,9 +33,23 @@ public class MainActivity extends AppCompatActivity {
 
         button = findViewById(R.id.button);
         imageView = findViewById(R.id.imageView);
+        random = new Random();
         int number = random.nextInt(3) + 1;
 
-        random = new Random();
+         //imageView.setImageDrawable();
 
+
+
+
+            if (number == 1) {
+                imageView.setImageResource(R.drawable.first);
+            }
+            if (number == 2) {
+                imageView.setImageResource(R.drawable.second);
+            }
+            if (number == 3) {
+                imageView.setImageResource(R.drawable.third);
+            }
+
+        }
     }
-}
