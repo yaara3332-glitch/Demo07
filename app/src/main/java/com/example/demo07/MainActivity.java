@@ -22,34 +22,29 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
-
-
         button = findViewById(R.id.button);
         imageView = findViewById(R.id.imageView);
         random = new Random();
+    }
+
+
+    public void clicked(View view) {
         int number = random.nextInt(3) + 1;
+        if (number == 1) {
+            imageView.setImageResource(R.drawable.first);
+        }
+        if (number == 2) {
+            imageView.setImageResource(R.drawable.second);
+        }
+        if (number == 3) {
+            imageView.setImageResource(R.drawable.third);
 
-         //imageView.setImageDrawable();
 
 
 
-
-            if (number == 1) {
-                imageView.setImageResource(R.drawable.first);
-            }
-            if (number == 2) {
-                imageView.setImageResource(R.drawable.second);
-            }
-            if (number == 3) {
-                imageView.setImageResource(R.drawable.third);
-            }
 
         }
     }
+}
+
