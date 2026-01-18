@@ -32,12 +32,15 @@ public class MainActivity extends AppCompatActivity {
     public void clicked(View view) {
         int number = random.nextInt(3) + 1;
         if (number == 1) {
+            button.setText("1");
             imageView.setImageResource(R.drawable.first);
         }
         if (number == 2) {
+            button.setText("2");
             imageView.setImageResource(R.drawable.second);
         }
         if (number == 3) {
+            button.setText("3");
             imageView.setImageResource(R.drawable.third);
 
 
